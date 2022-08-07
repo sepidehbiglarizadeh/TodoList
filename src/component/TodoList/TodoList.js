@@ -1,12 +1,17 @@
 import Todo from "../Todo/Todo";
 
-const TodoList = ({ todos }) => {
-    
+const TodoList = ({ todos, onCompleted }) => {
   const renderTodos = () => {
     if (todos.length === 0) return <div>Add some todos</div>;
 
     return todos.map((todo) => {
-      return <Todo todo={todo}/>
+      return (
+        <Todo
+          key={todo.id}
+          todo={todo}
+          onCompleted={() => onCompleted(todo.id)}
+        />
+      );
     });
   };
 

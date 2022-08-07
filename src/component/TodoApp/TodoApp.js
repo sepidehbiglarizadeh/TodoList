@@ -14,13 +14,22 @@ const TodoApp = () => {
       text: input,
       isCompleted: false,
     };
-    setTodos([...todos,newTodo]);
+    setTodos([...todos, newTodo]);
+  };
+
+  const completedHandler = (id) => {
+    const index = todos.findIndex((todo) => todo.id === id);
+    const selectedTodo = { ...todos[index] };
+    selectedTodo.isCompleted = !selectedTodo.isCompleted;
+    const updatedTodos = [...todos];
+    updatedTodos[index] = selectedTodo;
+    setTodos(updatedTodos);
   };
 
   return (
     <div className="container">
       <TodoForm addTodoHandler={addTodoHandler} />
-      <TodoList todos={todos}/>
+      <TodoList todos={todos} onCompleted={completedHandler} />
     </div>
   );
 };
