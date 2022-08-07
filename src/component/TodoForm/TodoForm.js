@@ -16,7 +16,7 @@ const TodoForm = (props) => {
       return;
     }
 
-    props.addTodoHandler(inputValue);
+    props.submitTodoHandler(inputValue);
     setInputValue("");
   };
 
