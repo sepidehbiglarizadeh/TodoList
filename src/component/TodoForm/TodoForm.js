@@ -12,7 +12,6 @@ const TodoForm = (props) => {
   }, []);
 
   const changeHandler = (e) => {
-    console.log(e.target.value);
     setInputValue(e.target.value);
   };
 
