@@ -1,11 +1,27 @@
 .todo{
     display: flex;
     justify-content: space-between;
-    width: 200px;
+    width: 30rem;
     margin: 10px;
 }
 
 .completed{
     text-decoration: line-through;
     color: #ccc;
+}
+
+.btn{
+    color: #6d28d9;
+    background-color: #fff;
+    border: 1px solid #6d28d9;
+    border-radius: 5px;
+    outline: none;
+    padding: 2px 5px;
+    cursor: pointer;
+}
+
+.remove{
+    color: rgb(236,68,68);
+    border: 1px solid rgb(236,68,68);
+    margin-left: 1rem;
 }

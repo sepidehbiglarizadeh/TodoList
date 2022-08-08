@@ -3,8 +3,38 @@
   border-radius: 5px;
   padding: 3px 5px;
   outline: none;
+  width: 200px;
 }
 
 .input:focus {
-  border: 1px solid blueviolet;
+  border: 2px solid blueviolet;
+}
+
+.formControl{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 30rem;
+    margin-bottom: 2rem;
+}
+
+.btn{
+    color: #6d28d9;
+    background-color: #fff;
+    border: 1px solid #6d28d9;
+    border-radius: 5px;
+    outline: none;
+    padding: 2px 5px;
+    cursor: pointer;
+}
+
+.add{
+    color: #fff;
+    background-color:#6d28d9 ;
+}
+
+.update{
+    background-color: #fff;
+    color: #9f75e2;
+
 }
