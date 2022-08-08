@@ -1,0 +1,19 @@
+.header{
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.header span {
+    margin-right: 2rem;
+    display: inline-block;
+    width: 20px;
+    font-size: 1.4rem;
+    height: 20px;
+    background-color: #d0c7f7;
+    color: #6d28d9;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

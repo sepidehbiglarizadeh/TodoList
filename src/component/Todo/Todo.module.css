@@ -5,6 +5,11 @@
     margin: 10px;
 }
 
+.todoText{
+    cursor: pointer;
+    font-weight: bold;
+}
+
 .completed{
     text-decoration: line-through;
     color: #ccc;
