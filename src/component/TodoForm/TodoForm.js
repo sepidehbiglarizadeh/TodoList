@@ -1,7 +1,13 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
+import styles from "./TodoForm.module.css";
 
 const TodoForm = (props) => {
   const [inputValue, setInputValue] = useState("");
+  const inputRef = useRef(null);
+
+  useEffect(() => {
+    inputRef.current.focus();
+  }, []);
 
   const changeHandler = (e) => {
     console.log(e.target.value);
@@ -22,8 +28,31 @@ const TodoForm = (props) => {
 
   return (
     <form onSubmit={submitHandler}>
-      <input type="text" value={inputValue} onChange={changeHandler} />
-      <button type="submit">Add</button>
+      {props.edit ? (
+        <>
+          <input
+            className={styles.input}
+            type="text"
+            value={inputValue}
+            onChange={changeHandler}
+            placeholder="update todo"
+            ref={inputRef}
+          />
+          <button type="submit">Update</button>
+        </>
+      ) : (
+        <>
+          <input
+            className={styles.input}
+            type="text"
+            value={inputValue}
+            onChange={changeHandler}
+            placeholder="add todo"
+            ref={inputRef}
+          />
+          <button type="submit">Add</button>
+        </>
+      )}
     </form>
   );
 };
